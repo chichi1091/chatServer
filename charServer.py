@@ -22,4 +22,7 @@ def chat(ws):
             break
     users.remove(ws)
 
-run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), server=GeventWebSocketServer)
+if os.getenv("HEROKU")==None:
+    run(host="localhost", port=(os.environ.get("PORT", 5200)), server=GeventWebSocketServer, debug=True, reloader=True)
+else:
+    run(host="0.0.0.0", port=(os.environ.get("PORT", 5200)), server=GeventWebSocketServer)
