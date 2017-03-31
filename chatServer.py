@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+import os
 from bottle import get, template, run
 from bottle.ext.websocket import GeventWebSocketServer
 from bottle.ext.websocket import websocket
