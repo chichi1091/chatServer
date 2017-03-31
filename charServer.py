@@ -22,4 +22,4 @@ def chat(ws):
             break
     users.remove(ws)
 
-run(host='0.0.0.0', port=5000, server=GeventWebSocketServer)
+run(host='0.0.0.0', port=int(os.environ.get("PORT", 5000)), server=GeventWebSocketServer)
