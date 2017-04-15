@@ -33,7 +33,7 @@
     </script>
 </head>
 <body>
-<h2>WebSocket Chat Example</h2>
+<h2>WebSocket Chat Bottle</h2>
 <form id="send-message">
     <input id="name" type="text" value="name">
     <input id="message" type="text" value="message" />
